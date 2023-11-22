@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Money-Guard/static/css/main.f855e6bc.css",
+    "main.js": "/Money-Guard/static/js/main.52fb1b43.js",
+    "static/js/787.1d0e9908.chunk.js": "/Money-Guard/static/js/787.1d0e9908.chunk.js",
+    "index.html": "/Money-Guard/index.html",
+    "main.f855e6bc.css.map": "/Money-Guard/static/css/main.f855e6bc.css.map",
+    "main.52fb1b43.js.map": "/Money-Guard/static/js/main.52fb1b43.js.map",
+    "787.1d0e9908.chunk.js.map": "/Money-Guard/static/js/787.1d0e9908.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.52fb1b43.js"
+  ]
+}
