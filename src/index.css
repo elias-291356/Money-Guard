@@ -1,3 +1,29 @@
+@import-normalize;
+
+:root {
+  --form-color: #FFFFFF99;
+  --text-color: #FBFBFB;
+  --expence-color: #FF868D;
+  --income-color: #FFB627;
+  --text-button: #623F8B;
+
+  --modal-shadow: 0px 4px 60px 0px rgba(0, 0, 0, 0.25);
+  --button-shadow: 1px 9px 15px 0px rgba(0, 0, 0, 0.20);
+  --transition-dur-and-func: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  --button-gradient: linear-gradient(97deg, rgba(255, 199, 39, 1) -16.42%, rgba(158, 64, 186, 1) 97.04%, rgba(112, 0, 255, 1) 150.71%);
+
+}
+
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(220deg, rgba(109, 84, 235, 1), rgb(75, 21, 110));
+  height: 100vh;
+}
+
+
+
 * {
   box-sizing: border-box;
 }
@@ -54,9 +80,10 @@ select:focus {
 @media screen and (min-width: 320px) {
   .container {
     width: 100%;
-    /* max-width: 320px; */
     margin-left: 0 auto;
     margin-right: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -73,7 +100,7 @@ select:focus {
   .container {
     width: 100%;
     min-width: 1280px;
-    padding-left: 91px;
-    padding-right: 91px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
 }
