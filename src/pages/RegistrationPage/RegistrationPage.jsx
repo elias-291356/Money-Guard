@@ -1,4 +1,3 @@
-import React, { useEffect } from "react";
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 
 const RegistrationPage = () => {
