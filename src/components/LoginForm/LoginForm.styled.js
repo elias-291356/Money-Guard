@@ -1,13 +1,24 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
+// @media screen and(min - width: 320px) {
+//   margin - top: 100px;
+// }
+
+// @media screen and(min - width: 768px) {
+//   margin - top: 230px;
+// }
+// @media screen and(min - width: 1280px) {
+//   margin - top: 75px;
+// }
+
 export const Container = styled.div`
   @media screen and (min-width: 320px) {
     display: flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-
+    margin-top: 100px;
   }
 
   @media screen and (min-width: 768px) {
@@ -15,27 +26,27 @@ export const Container = styled.div`
     align-items: center;
     max-width: 768px;
     width: 533px;
-    min-height:570px;
-
+    min-height: 570px;
+    margin-top: 230px;
     border-radius: 8px;
     backdrop-filter: blur(50px);
     box-shadow: var(--modal-shadow);
   }
 
   @media screen and (min-width: 1280px) {
-    min-width: 1280px;
+    max-width: 1280px;
     padding-left: 16px;
     padding-right: 16px;
+    margin-top: 75px;
   }
 `;
 export const FormLoginWrap = styled.div`
-@media screen and (min-width: 320px) {
-   width: 280px;
+  @media screen and (min-width: 320px) {
+    width: 280px;
   }
   @media screen and (min-width: 768px) {
-   width: 410px;
+    width: 410px;
   }
-
 `;
 
 export const InputForm = styled.input`
@@ -43,14 +54,12 @@ export const InputForm = styled.input`
   outline: none;
   background-color: transparent;
   color: var(--form-color);
-  width:280px;
+  width: 280px;
 `;
 export const FormLoginContainer = styled.div`
   display: flex;
   flex-direction: column;
   row-gap: 40px;
- 
-
 `;
 export const WrapEmail = styled.div`
   display: flex;
@@ -83,8 +92,6 @@ export const AccentButton = styled.button`
   height: 50px;
   font-size: 18px;
   letter-spacing: 1.8px;
-
-
 `;
 export const NoAccentButton = styled.button`
   text-transform: uppercase;
@@ -99,27 +106,23 @@ export const NoAccentButton = styled.button`
   height: 50px;
   font-size: 18px;
   letter-spacing: 1.8px;
-
 `;
 export const LogoWrap = styled.div`
-display:flex;
-align-items: center;
-flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 `;
-export const Logo = styled.div`
-
-`;
+export const Logo = styled.div``;
 export const AppNameH1 = styled.h1`
-font-size: 19px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 `;
 export const Form = styled.div`
-width: 410px;
+  width: 410px;
 `;
 export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
-   display: block;
-
+  display: block;
 `;
