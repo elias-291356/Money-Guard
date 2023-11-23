@@ -46,6 +46,7 @@ ul,
 li {
   margin-top: 0;
   margin-bottom: 0;
+  list-style: none;
 }
 
 .list {
@@ -63,6 +64,8 @@ img {
 button {
   cursor: pointer;
 }
+
+
 
 .is-hidden {
   display: none;
