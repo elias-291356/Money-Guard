@@ -109,6 +109,7 @@ const RegistrationForm = () => {
                   />
                 </svg>
                 <InputForm
+                  required
                   type="text"
                   placeholder="Name"
                   {...register("Name", { max: 20, min: 4 })}
@@ -136,6 +137,7 @@ const RegistrationForm = () => {
                   </defs>
                 </svg>
                 <InputForm
+                  required
                   type="email"
                   placeholder="E-mail"
                   {...register("E-mail", { max: 20, min: 4 })}
@@ -163,6 +165,7 @@ const RegistrationForm = () => {
                   </defs>
                 </svg>
                 <InputForm
+                  required
                   type="password"
                   placeholder="Password"
                   {...register("password", { max: 20, min: 4 })}
@@ -190,6 +193,7 @@ const RegistrationForm = () => {
                   </defs>
                 </svg>
                 <InputForm
+                  required
                   type="password"
                   placeholder="Confirm password"
                   {...register("password", { max: 20, min: 4 })}
