@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { NavLink, useLocation } from "react-router-dom";
 import {
   Container,
   FormLoginContainer,
@@ -13,6 +14,7 @@ import {
   LogoWrap,
   Logo,
   AppNameH1,
+  StyledNavLink,
 } from "./LoginForm.styled";
 
 const LoginForm = () => {
@@ -141,8 +143,10 @@ const LoginForm = () => {
 
           {/* <input type="submit" /> */}
           <WrapButtonsForm>
-            <AccentButton type="submit">Log in</AccentButton>
-            <NoAccentButton type="submit"> Register </NoAccentButton>
+            <AccentButton type="submit"> Log in</AccentButton>
+            <NoAccentButton type="submit">
+              <StyledNavLink to={`/register`}>Register</StyledNavLink>
+            </NoAccentButton>
           </WrapButtonsForm>
         </form>
       </FormLoginWrap>

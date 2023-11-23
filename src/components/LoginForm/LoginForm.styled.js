@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -6,8 +7,7 @@ export const Container = styled.div`
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
+
   }
 
   @media screen and (min-width: 768px) {
@@ -16,8 +16,7 @@ export const Container = styled.div`
     max-width: 768px;
     width: 533px;
     min-height:570px;
-    padding-left: 32px;
-    padding-right: 32px;
+
     border-radius: 8px;
     backdrop-filter: blur(50px);
     box-shadow: var(--modal-shadow);
@@ -84,6 +83,7 @@ export const AccentButton = styled.button`
   font-size: 18px;
   letter-spacing: 1.8px;
 
+
 `;
 export const NoAccentButton = styled.button`
   text-transform: uppercase;
@@ -116,4 +116,9 @@ line-height: normal;
 `;
 export const Form = styled.div`
 width: 410px;
+`;
+export const StyledNavLink = styled(NavLink)`
+  text-decoration: none;
+   display: block;
+
 `;
