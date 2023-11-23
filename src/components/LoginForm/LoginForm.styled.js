@@ -11,10 +11,16 @@ export const Container = styled.div`
   }
 
   @media screen and (min-width: 768px) {
-
+    display: flex;
+    align-items: center;
     max-width: 768px;
+    width: 533px;
+    min-height:570px;
     padding-left: 32px;
     padding-right: 32px;
+    border-radius: 8px;
+    backdrop-filter: blur(50px);
+    box-shadow: var(--modal-shadow);
   }
 
   @media screen and (min-width: 1280px) {
@@ -23,9 +29,15 @@ export const Container = styled.div`
     padding-right: 16px;
   }
 `;
-// export const FormLoginWrap = styled.div`
-//   background-color: transparent;
-// `;
+export const FormLoginWrap = styled.div`
+@media screen and (min-width: 320px) {
+   width: 280px;
+  }
+  @media screen and (min-width: 768px) {
+   width: 410px;
+  }
+`;
+
 export const InputForm = styled.input`
   border: none;
   outline: none;
@@ -101,4 +113,7 @@ font-size: 19px;
 font-style: normal;
 font-weight: 400;
 line-height: normal;
+`;
+export const Form = styled.div`
+width: 410px;
 `;
