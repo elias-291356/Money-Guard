@@ -35,6 +35,7 @@ export const FormLoginWrap = styled.div`
   @media screen and (min-width: 768px) {
    width: 410px;
   }
+
 `;
 
 export const InputForm = styled.input`

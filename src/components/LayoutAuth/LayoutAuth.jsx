@@ -6,12 +6,12 @@ export const LayoutAuth = () => {
       <header>
         <nav>
           <ul>
-            <li>
+            {/* <li>
               <NavLink to="register"> Register</NavLink>
             </li>
             <li>
               <NavLink to="login"> Login</NavLink>
-            </li>
+            </li> */}
           </ul>
         </nav>
       </header>
