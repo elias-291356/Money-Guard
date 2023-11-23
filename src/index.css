@@ -3,6 +3,7 @@
 :root {
   --form-color: #FFFFFF99;
   --text-color: #FBFBFB;
+  --bcg-button: #FBFBFB;
   --expence-color: #FF868D;
   --income-color: #FFB627;
   --text-button: #623F8B;
@@ -19,7 +20,7 @@ body {
   margin: 0;
   color: var(--text-color);
   font-family: "Poppins", sans-serif;
-  /* background: linear-gradient(220deg, rgba(109, 84, 235, 1), rgb(75, 21, 110)); */
+  background: linear-gradient(220deg, rgba(109, 84, 235, 1), rgb(75, 21, 110));
   height: 100vh;
 }
 
