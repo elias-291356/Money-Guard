@@ -1,7 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { LayoutAuth } from "./components/LayoutAuth/LayoutAuth";
-import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 
