@@ -126,3 +126,13 @@ export const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   display: block;
 `;
+
+export const SvgLogo = styled.svg`
+width:25px;
+height: 25px;
+`;
+export const SvgAuthForm = styled.svg`
+width:24px;
+height: 24px;
+fill: var(--form-color);
+`;
