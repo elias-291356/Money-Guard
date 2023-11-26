@@ -1,6 +1,4 @@
 import React from "react";
-
-import { useForm } from "react-hook-form";
 import {
   AccentButton,
   AppNameH1,
@@ -17,20 +15,32 @@ import {
   WrapEmail,
   WrapPassword,
 } from "../LoginForm/LoginForm.styled";
-import sprite from "../../images/sprite.svg";
 import {
   FormLoginWrapRegister,
   InputesWrapperRegister,
   WrapName,
 } from "./RegistrationForm";
+
+import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import sprite from "../../images/sprite.svg";
+import { setSubmit } from "../../redux/reducer/userReducer";
+import { registerThunk } from "../../redux/thunk";
+
 const RegistrationForm = () => {
+  const dispatch = useDispatch();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    dispatch(registerThunk(data));
+  };
   console.log(errors);
+
   return (
     <Container>
       <FormLoginContainer>
