@@ -1,12 +1,16 @@
 
 
 import { createSlice } from "@reduxjs/toolkit";
+import { registerThunk } from "../thunk";
 // import { registerThunk } from "../thunk";
 
 
 const initialState = {
   isSubmit: false,
+  isLoading: false,
+  userData: null,
   token: null,
+  error: null,
 };
 
 const userSlice = createSlice({
@@ -19,22 +23,22 @@ const userSlice = createSlice({
     },
   },
   extraReducers: builder => {
-    // builder
+    builder
 
 
-    // ------------ Registration -------------//
+      // ------------ Registration -------------//
 
-    // .addCase(registerThunk.pending, state => {
+      .addCase(registerThunk.pending, state => {
 
-    // })
-    // .addCase(registerThunk.fulfilled, (state, action) => {
+      })
+      .addCase(registerThunk.fulfilled, (state, action) => {
 
-    //   state.userData = action.payload.user;
+        state.userData = action.payload.user;
 
-    // })
-    // .addCase(registerThunk.rejected, (state, action) => {
+      })
+      .addCase(registerThunk.rejected, (state, action) => {
 
-    // })
+      })
 
 
   },

@@ -25,6 +25,7 @@ import {
 } from "./RegistrationForm";
 import { useDispatch } from "react-redux";
 import { setSubmit } from "../../redux/reducer/userReducer";
+import { registerThunk } from "../../redux/thunk";
 const RegistrationForm = () => {
   const dispatch = useDispatch();
 
@@ -35,7 +36,7 @@ const RegistrationForm = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    dispatch(setSubmit(true));
+    dispatch(registerThunk(data));
   };
   console.log(errors);
 
@@ -62,7 +63,7 @@ const RegistrationForm = () => {
                   required
                   type="text"
                   placeholder="Name"
-                  {...register("Name", { max: 20, min: 4 })}
+                  {...register("username", { max: 20, min: 4 })}
                 />
               </WrapName>
               <WrapEmail>
@@ -74,7 +75,7 @@ const RegistrationForm = () => {
                   required
                   type="email"
                   placeholder="E-mail"
-                  {...register("E-mail", { max: 20, min: 4 })}
+                  {...register("email", { max: 20, min: 4 })}
                 />
               </WrapEmail>
               <WrapPassword>
@@ -95,7 +96,7 @@ const RegistrationForm = () => {
                   <use href={`${sprite}#icon-password`}></use>
                 </SvgAuthForm>
                 <InputForm
-                  name="password"
+                  // name="password"
                   required
                   type="password"
                   minLength={6}

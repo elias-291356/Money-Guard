@@ -1,6 +1,6 @@
 import axios from 'axios';
-console.log(10 + 10)
-const BASE_URL = 'https://wallet.goit.ua/docs/';
+
+const BASE_URL = 'https://wallet.goit.ua/';
 const $instance = axios.create({
   baseURL: BASE_URL,
 });
@@ -8,7 +8,7 @@ const $instance = axios.create({
 const setToken = token => {
   $instance.defaults.headers.Authorization = `Bearer ${token}`;
 }
-const clearToken = token => {
+const clearToken = () => {
   $instance.defaults.headers.Authorization = '';
 }
 
