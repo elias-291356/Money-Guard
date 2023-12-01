@@ -96,7 +96,7 @@ const RegistrationForm = () => {
                   <use href={`${sprite}#icon-password`}></use>
                 </SvgAuthForm>
                 <InputForm
-                  // name="password"
+                  name="password"
                   required
                   type="password"
                   minLength={6}

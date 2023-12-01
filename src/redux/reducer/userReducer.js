@@ -29,15 +29,20 @@ const userSlice = createSlice({
       // ------------ Registration -------------//
 
       .addCase(registerThunk.pending, state => {
+        state.isLoading = true;
+        state.error = null;
+
 
       })
       .addCase(registerThunk.fulfilled, (state, action) => {
-
+        state.isLoading = false;
         state.userData = action.payload.user;
+        state.token = action.payload.token;
 
       })
       .addCase(registerThunk.rejected, (state, action) => {
-
+        state.isLoading = false;
+        state.error = action.payload;
       })
 
 

@@ -18,14 +18,20 @@ import {
   SvgAuthForm,
 } from "./LoginForm.styled";
 import sprite from "../../images/sprite.svg";
+import { registerThunk } from "../../redux/thunk";
+import { useDispatch } from "react-redux";
 
 const LoginForm = () => {
+  const dispatch = useDispatch();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    console.log(data);
+    dispatch(registerThunk(data));
+  };
   console.log(errors);
 
   return (
@@ -46,8 +52,8 @@ const LoginForm = () => {
                 <use href={`${sprite}#icon-user`}></use>
               </SvgAuthForm>
               <InputForm
-                required
                 name="email"
+                required
                 type="email"
                 placeholder="E-mail"
                 {...register("E-mail", { max: 20, min: 4 })}
@@ -58,8 +64,8 @@ const LoginForm = () => {
                 <use href={`${sprite}#icon-password`}></use>
               </SvgAuthForm>
               <InputForm
-                required
                 name="password"
+                required
                 type="password"
                 placeholder="Password"
                 minLength={6}

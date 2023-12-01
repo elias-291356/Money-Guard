@@ -1,6 +1,6 @@
 
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { registerRequest } from "../service/api";
+import { loginRequest, registerRequest } from "../service/api";
 
 //---------------registration------------------//
 export const registerThunk = createAsyncThunk(
@@ -11,10 +11,27 @@ export const registerThunk = createAsyncThunk(
       console.log(data)
       return data;
     } catch (error) {
-      console.error("Error in registerRequest:", error);
-      console.log("Response data:", error.response.data);
-      throw error; // Прокидывайте ошибку дальше
-      // return thunkAPI.rejectWithValue(error.message);
+      // console.error("Error in registerRequest:", error);
+      // console.log("Response data:", error.response.data);
+      // throw error; // Прокидывайте ошибку дальше
+      return thunkAPI.rejectWithValue(error.message);
+
+    }
+  }
+);
+//---------------login------------------//
+export const loginThunk = createAsyncThunk(
+  'user/loginThunk',
+  async (formData, thunkAPI) => {
+    try {
+      const data = await loginRequest(formData);
+      console.log(data)
+      return data;
+    } catch (error) {
+      // console.error("Error in registerRequest:", error);
+      // console.log("Response data:", error.response.data);
+      // throw error; // Прокидывайте ошибку дальше
+      return thunkAPI.rejectWithValue(error.message);
 
     }
   }

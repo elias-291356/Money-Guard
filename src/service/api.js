@@ -47,10 +47,12 @@ export const transactionsByCategoryRequest = async (formData) => {
 //Auth Controller
 export const loginRequest = async (formData) => {
   const { data } = await $instance.post('/api/auth/sign-in', formData);
+  setToken(data.token)
   return data;
 };
 export const registerRequest = async (formData) => {
   const { data } = await $instance.post('/api/auth/sign-up', formData);
+  setToken(data.token)
   return data;
 };
 export const logOutRequest = async () => {
