@@ -6,6 +6,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   isSubmit: false,
+  token: null,
 };
 
 const userSlice = createSlice({
@@ -13,7 +14,6 @@ const userSlice = createSlice({
 
   initialState,
   reducers: {
-
     setSubmit: (state, action) => {
       state.isSubmit = action.payload;
     },
