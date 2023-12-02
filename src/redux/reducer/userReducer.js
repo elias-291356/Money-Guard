@@ -1,7 +1,7 @@
 
 
 import { createSlice } from "@reduxjs/toolkit";
-import { loginThunk, refreshUserThunk, registerThunk } from "../thunk";
+import { loginThunk, logoutThunk, refreshUserThunk, registerThunk } from "../thunk";
 // import { registerThunk } from "../thunk";
 
 
@@ -51,6 +51,21 @@ const userSlice = createSlice({
 
       })
       .addCase(loginThunk.rejected, (state, action) => {
+        state.isLoading = false;
+        state.error = action.payload;
+      })
+      // ------------ Logout -------------//
+      .addCase(logoutThunk.pending, state => {
+        state.isLoading = true;
+        state.error = null;
+      })
+      .addCase(logoutThunk.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.userData = null;
+        state.token = null;
+
+      })
+      .addCase(logoutThunk.rejected, (state, action) => {
         state.isLoading = false;
         state.error = action.payload;
       })

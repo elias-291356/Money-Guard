@@ -57,7 +57,7 @@ export const registerRequest = async (formData) => {
 };
 export const logOutRequest = async () => {
   const { data } = await $instance.delete('/api/auth/sign-out');
-  clearToken(data.token)
+  clearToken()
   return data;
 };
 

@@ -1,14 +1,11 @@
-import { useSelector } from "react-redux";
-import { NavLink, Outlet } from "react-router-dom";
-import { selectUserData } from "../../redux/selector";
+import { Outlet } from "react-router-dom";
+import Header from "../Header/Header";
 
 export const LayoutAuth = () => {
-  const userData = useSelector(selectUserData);
-
   return (
     <>
-      <header>
-        {/* <nav>
+      {/* <header> */}
+      {/* <nav>
           <ul>
             <li>
               <NavLink to="/">Home</NavLink>
@@ -29,7 +26,7 @@ export const LayoutAuth = () => {
             )}
           </ul>
         </nav> */}
-      </header>
+      {/* </header> */}
       <main>
         <Outlet />
       </main>

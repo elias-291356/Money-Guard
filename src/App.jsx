@@ -1,20 +1,17 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import "./App.css";
 import { LayoutAuth } from "./components/LayoutAuth/LayoutAuth";
-import LoginForm from "./components/LoginForm/LoginForm";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
-import HomePage from "./pages/HomePage/HomePage";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
-import { selectToken, selectUserData } from "./redux/selector";
+import { selectToken } from "./redux/selector";
 import { refreshUserThunk } from "./redux/thunk";
 
 const App = () => {
   const token = useSelector(selectToken);
-  const userData = useSelector(selectUserData);
-  console.log(userData);
+
   const dispatch = useDispatch();
   useEffect(() => {
     if (!token) return;
