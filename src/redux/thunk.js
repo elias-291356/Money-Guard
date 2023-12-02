@@ -11,9 +11,7 @@ export const registerThunk = createAsyncThunk(
       console.log(data)
       return data;
     } catch (error) {
-      // console.error("Error in registerRequest:", error);
-      // console.log("Response data:", error.response.data);
-      // throw error; // Прокидывайте ошибку дальше
+
       return thunkAPI.rejectWithValue(error.message);
 
     }
@@ -28,9 +26,7 @@ export const loginThunk = createAsyncThunk(
       console.log(data)
       return data;
     } catch (error) {
-      // console.error("Error in registerRequest:", error);
-      // console.log("Response data:", error.response.data);
-      // throw error; // Прокидывайте ошибку дальше
+
       return thunkAPI.rejectWithValue(error.message);
 
     }

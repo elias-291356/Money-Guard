@@ -24,7 +24,7 @@ import {
   WrapName,
 } from "./RegistrationForm";
 import { useDispatch } from "react-redux";
-import { setSubmit } from "../../redux/reducer/userReducer";
+
 import { registerThunk } from "../../redux/thunk";
 const RegistrationForm = () => {
   const dispatch = useDispatch();

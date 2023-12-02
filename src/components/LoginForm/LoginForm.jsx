@@ -18,8 +18,9 @@ import {
   SvgAuthForm,
 } from "./LoginForm.styled";
 import sprite from "../../images/sprite.svg";
-import { registerThunk } from "../../redux/thunk";
+
 import { useDispatch } from "react-redux";
+import { loginThunk } from "../../redux/thunk";
 
 const LoginForm = () => {
   const dispatch = useDispatch();
@@ -30,7 +31,7 @@ const LoginForm = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    dispatch(registerThunk(data));
+    dispatch(loginThunk(data));
   };
   console.log(errors);
 
@@ -56,7 +57,7 @@ const LoginForm = () => {
                 required
                 type="email"
                 placeholder="E-mail"
-                {...register("E-mail", { max: 20, min: 4 })}
+                {...register("email", { max: 20, min: 4 })}
               />
             </WrapEmail>
             <WrapPassword>

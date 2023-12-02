@@ -5,7 +5,7 @@ const $instance = axios.create({
   baseURL: BASE_URL,
 });
 
-const setToken = token => {
+export const setToken = token => {
   $instance.defaults.headers.Authorization = `Bearer ${token}`;
 }
 const clearToken = () => {
@@ -57,6 +57,7 @@ export const registerRequest = async (formData) => {
 };
 export const logOutRequest = async () => {
   const { data } = await $instance.delete('/api/auth/sign-out');
+  clearToken(data.token)
   return data;
 };
 
