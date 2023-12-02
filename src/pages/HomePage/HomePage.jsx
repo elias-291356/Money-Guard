@@ -1,9 +1,11 @@
 import React from "react";
 
+import TransactionsItem from "../../components/TransactionsItem/TransactionsItem";
+
 const HomePage = () => {
   return (
     <div>
-      <p>welcome to users app</p>
+      <TransactionsItem />
     </div>
   );
 };

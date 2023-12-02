@@ -5,11 +5,13 @@ import "./App.css";
 import { LayoutAuth } from "./components/LayoutAuth/LayoutAuth";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
-import { selectToken } from "./redux/selector";
+import { selectToken, selectUserData } from "./redux/selector";
 import { refreshUserThunk } from "./redux/thunk";
 
 const App = () => {
   const token = useSelector(selectToken);
+  const userData = useSelector(selectUserData);
+  console.log(userData);
   const dispatch = useDispatch();
   useEffect(() => {
     if (!token) return;
