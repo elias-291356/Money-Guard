@@ -24,7 +24,7 @@ const Header = () => {
     dispatch(logoutThunk());
     setTimeout(() => {
       navigate("/login");
-    }, 300);
+    }, 600);
   };
   return (
     <>

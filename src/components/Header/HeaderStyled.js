@@ -45,6 +45,7 @@ line-height: normal;
 export const SvgLogoHeader = styled.svg`
 width:17px;
 height: 17px;
+
 `;
 export const LogoutHeader = styled.div`
     display: flex;
@@ -66,4 +67,5 @@ color: var(--form-color);
 export const ExitButtonSvg = styled.svg`
 width:18px;
 height: 18px;
+cursor: pointer;
 `;

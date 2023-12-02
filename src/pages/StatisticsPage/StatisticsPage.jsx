@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../../components/Header/Header";
 import Navigation from "../../components/Navigation/Navigation";
 
-const HomePage = () => {
+const StatisticsPage = () => {
   return (
     <div>
       <Header />
@@ -11,4 +11,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default StatisticsPage;

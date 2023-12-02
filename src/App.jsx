@@ -8,6 +8,9 @@ import LoginPage from "./pages/LoginPage/LoginPage";
 import RegistrationPage from "./pages/RegistrationPage/RegistrationPage";
 import { selectToken } from "./redux/selector";
 import { refreshUserThunk } from "./redux/thunk";
+import CurrencyPage from "./pages/CurrencyPage/CurrencyPage.jsx";
+import StatisticsPage from "./pages/StatisticsPage/StatisticsPage";
+import HomePage from "./pages/HomePage/HomePage";
 
 const App = () => {
   const token = useSelector(selectToken);
@@ -25,6 +28,9 @@ const App = () => {
           <Route path="register" element={<RegistrationPage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="dashboard" element={<DashboardPage />} />
+          <Route path="home" element={<HomePage />} />
+          <Route path="statistics" element={<StatisticsPage />} />
+          <Route path="currency" element={<CurrencyPage />} />
         </Route>
       </Routes>
     </>
