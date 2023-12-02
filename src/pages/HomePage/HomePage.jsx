@@ -5,7 +5,8 @@ import TransactionsItem from "../../components/TransactionsItem/TransactionsItem
 const HomePage = () => {
   return (
     <div>
-      <TransactionsItem />
+      <h1>HOME PAGE</h1>
+      {/* <TransactionsItem /> */}
     </div>
   );
 };
