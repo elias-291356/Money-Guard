@@ -1,1 +1,1 @@
-// export const selectIsSubmit = (state) => state.user.isSubmit;
+export const selectToken = (state) => state.user.token;

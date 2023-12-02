@@ -15,8 +15,8 @@ const clearToken = () => {
 
 
 //Users Controller
-export const currentUsersRequest = async (formData) => {
-  const { data } = await $instance.get('/api/users/current', formData);
+export const currentUserRequest = async () => {
+  const { data } = await $instance.get('/api/users/current');
   return data;
 };
 
