@@ -1,16 +1,7 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-// @media screen and(min - width: 320px) {
-//   margin - top: 100px;
-// }
 
-// @media screen and(min - width: 768px) {
-//   margin - top: 230px;
-// }
-// @media screen and(min - width: 1280px) {
-//   margin - top: 75px;
-// }
 
 export const Container = styled.div`
   @media screen and (min-width: 320px) {

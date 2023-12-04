@@ -7,6 +7,7 @@ const CurrencyPage = () => {
     <div>
       <Header />
       <Navigation />
+      <p>carrency</p>
     </div>
   );
 };

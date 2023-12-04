@@ -7,6 +7,7 @@ const StatisticsPage = () => {
     <div>
       <Header />
       <Navigation />
+      <p>Statistics</p>
     </div>
   );
 };
