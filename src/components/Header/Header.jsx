@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import sprite from "../../images/sprite.svg";
 import {
   ContainerHeader,
@@ -13,19 +13,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectUserData } from "../../redux/selector";
 import { logoutThunk } from "../../redux/thunk";
 import { useNavigate } from "react-router-dom";
+import ModalLogout from "../ModalLogout/ModalLogout";
 
 const Header = () => {
+  const [modal, setModal] = useState(false);
+  const Toggle = () => setModal(!modal);
   const dispatch = useDispatch();
   const userData = useSelector(selectUserData);
+
   const username = userData?.username;
   const navigate = useNavigate();
 
   const handleLogout = () => {
     dispatch(logoutThunk());
-    setTimeout(() => {
-      navigate("/login");
-    }, 600);
   };
+  useEffect(() => {
+    if (userData === null) {
+      navigate("/login");
+    }
+  }, [userData, navigate]);
   return (
     <>
       <ContainerHeader>
@@ -37,9 +43,16 @@ const Header = () => {
         </ContainerLogo>
         <LogoutHeader>
           <UserName>{username} </UserName>
-          <ExitButtonSvg onClick={handleLogout}>
-            <use href={`${sprite}#icon-exit`}></use>
-          </ExitButtonSvg>
+          <>
+            <ExitButtonSvg onClick={Toggle}>
+              <use href={`${sprite}#icon-exit`}></use>
+            </ExitButtonSvg>
+            <ModalLogout
+              show={modal}
+              close={Toggle}
+              handleLogout={handleLogout}
+            />
+          </>
         </LogoutHeader>
       </ContainerHeader>
     </>

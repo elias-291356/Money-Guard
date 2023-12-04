@@ -5,6 +5,7 @@ export const ContainerHeader = styled.header`
   @media screen and (min-width: 320px) {
     display: flex;
     justify-content: space-between;
+    height: 60px;
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 12px;
@@ -15,6 +16,7 @@ export const ContainerHeader = styled.header`
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
+    height: 80px;
     max-width: 768px;
     margin-right: auto;
     margin-left: auto;
@@ -36,7 +38,6 @@ align-items: center;
 width: 86px;
 `
 export const LogoNameHeader = styled.h1`
-  font-family: Poppins,sans-serif;
 font-size: 13px;
 font-style: normal;
 font-weight: 400;
@@ -57,7 +58,6 @@ export const LogoutHeader = styled.div`
 `;
 export const UserName = styled.p`
 /* text-align: right; */
-font-family: Poppins,sans-serif;
 font-size: 16px;
 font-style: normal;
 font-weight: 400;

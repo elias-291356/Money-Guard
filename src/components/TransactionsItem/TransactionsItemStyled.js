@@ -29,7 +29,6 @@ export const TableItem = styled.li`
   padding-top: 12px;
   padding-bottom: 12px;
   border-bottom: 1px solid var(--transaction-decorations);
-  font-family: Poppins, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -73,7 +72,6 @@ export const Edit = styled.p`
   justify-content: space-between;
   color: var(--transaction-decorations);
   text-align: center;
-  font-family: Poppins, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
